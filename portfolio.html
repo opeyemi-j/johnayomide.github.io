@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style`s.css" />
+    <script>
+      function sendWhatsApp(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let message = document.getElementById("message").value;
+        let url =
+          "https://wa.me/2348051306311?text=" +
+          "Name: " +
+          name +
+          "%0a" +
+          "Message: " +
+          message;
+        window.open(url, "_blank");
+      }
+    </script>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ff9800;
+      }
+
+      section {
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      #home {
+        background: #ff9800;
+        color: white;
+        padding: 80px 20px;
+      }
+
+      #about,
+      #services,
+      #contact {
+        background: #fff;
+        margin: 20px auto;
+        max-width: 900px;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .services-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .service {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1 1 250px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      form button {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        background: #ff9800;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 30px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .services-list {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+      <h2>Welcome to My Portfolio</h2>
+      <p>
+        Hi, I’m Afolabi John, an aspiring web designer and developer from
+        Nigeria.
+      </p>
+      <p>I build simple and clean websites for businesses and individuals.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is Afolabi John. I am passionate about technology and
+        learning new skills. I enjoy creating websites and solving problems
+        using code.
+      </p>
+      <p>Skills: HTML, CSS, Beginner JavaScript, WordPress.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>My Services</h2>
+      <div class="services-list">
+        <div class="service">
+          <h3>Web Design</h3>
+          <p>
+            I create responsive and mobile-friendly websites for small
+            businesses.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Cyber Security</h3>
+          <p>
+            Am also a cyber security enthusiast with a focus on protecting
+            online identities.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Basic SEO Setup</h3>
+          <p>Optimize websites for better ranking on search engines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>You can also connect with me on social media:</p>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+    </section>
+    <section>
+      <form onsubmit="sendWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send via WhatsApp</button>
+      </form>
+    </section>
+    <footer>
+      <p>© 2025 Afolabi John. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
